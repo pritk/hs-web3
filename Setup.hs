@@ -79,5 +79,5 @@ myBuildHook pd lbi uh flags = do
         isStackTest = not inCabal && "test:live" `elem` args
         isCabalTest = inCabal && willBuildLiveSuite pd && (null args || "live" `elem` args)
         hasLiveTestTarget = isStackTest || isCabalTest
-    when hasLiveTestTarget $ setupLiveTests v
+    --when hasLiveTestTarget $ setupLiveTests v
     buildHook simpleUserHooks pd lbi uh flags
